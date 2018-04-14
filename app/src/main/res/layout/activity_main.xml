@@ -3,7 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/blue_200">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvTodoList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow_50">
+
+    </android.support.v7.widget.RecyclerView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,23 +24,22 @@
             android:id="@+id/newCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/blue_800"
             android:layout_weight="1"
-            android:text="New Category" />
+            android:text="New Category"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <Button
-            android:id="@+id/NewTask"
+            android:id="@+id/newTask"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/blue_800"
             android:layout_weight="1"
-            android:text="New Task" />
+            android:text="New Task"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
     </LinearLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvBookList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </android.support.v7.widget.RecyclerView>
 
 
 </RelativeLayout>

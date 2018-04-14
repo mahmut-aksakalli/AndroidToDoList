@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_800"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/newTaskTittle"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        />
+
+    <EditText
+        android:id="@+id/nameTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tittle"
+        android:layout_marginTop="20dp"
+        android:text="task tittle..."
+        android:textColor="@color/white" />
+
+    <Spinner
+        android:id="@+id/PrioritySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/nameTask"
+        android:background="@color/blue_800"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:id="@+id/CategorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/PrioritySpinner"
+        android:background="@color/blue_800"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/addTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_800"
+        android:layout_alignParentBottom="true"
+        android:text="ADD TASK"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+</RelativeLayout>
