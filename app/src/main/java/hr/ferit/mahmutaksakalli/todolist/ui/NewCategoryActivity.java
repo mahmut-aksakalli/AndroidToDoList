@@ -1,5 +1,6 @@
 package hr.ferit.mahmutaksakalli.todolist.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
@@ -23,7 +24,13 @@ public class NewCategoryActivity extends AppCompatActivity {
 
     @OnClick(R.id.addCategory)
     public void addCategoryOnClick() {
-        nameCategory.setText("asd");
+
+        String cat = nameCategory.getText().toString();
+
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra(MainActivity.RETURN_CAT, cat);
+        setResult(RESULT_OK, returnIntent);
+        this.finish();
     }
 
     @OnClick(R.id.nameCategory)

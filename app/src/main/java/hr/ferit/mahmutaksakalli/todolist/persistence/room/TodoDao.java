@@ -17,14 +17,8 @@ public interface TodoDao{
     @Query("SELECT * FROM Todo")
     LiveData<List<Todo>> getTodos();
 
-    @Query("SELECT * FROM Todo WHERE Category = :category")
-    LiveData<List<Todo>> getTodosBy(String category);
-
-    @Query("SELECT * FROM Category")
-    LiveData<List<Category>> getCategories();
-
-    @Query("SELECT * FROM Category WHERE category=:category")
-    LiveData<List<Category>> checkCategory();
+    @Query("SELECT category FROM Category")
+    LiveData<List<String>> getCategories();
 
     @Delete
     void deleteTodo(Todo todo);
@@ -33,7 +27,7 @@ public interface TodoDao{
     void deleteCategory(Category category);
 
     @Insert
-    void insertBook(Todo todo);
+    void insertTodo(Todo todo);
 
     @Insert
     void insertCategory(Category category);

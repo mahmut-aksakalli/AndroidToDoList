@@ -31,15 +31,15 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_below="@id/nameTask"
-        android:background="@color/blue_800"
-        android:layout_marginTop="10dp" />
+        android:background="@color/blue_600"
+        android:layout_marginTop="15dp" />
 
     <Spinner
         android:id="@+id/CategorySpinner"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_below="@id/PrioritySpinner"
-        android:background="@color/blue_800"
+        android:background="@color/blue_600"
         android:layout_marginTop="10dp"/>
 
     <Button
