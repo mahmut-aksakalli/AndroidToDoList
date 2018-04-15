@@ -1,13 +1,18 @@
 package hr.ferit.mahmutaksakalli.todolist.model;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
+@Entity
 public class Category {
 
-    private int Id;
-    private String Category;
+    @PrimaryKey private int Id;
+    @ColumnInfo private String category;
 
-    public Category(int Id, String Category) {
+    public Category(int Id, String category) {
         this.Id = Id;
-        this.Category = Category;
+        this.category = category;
     }
 
     public int getId() {
@@ -19,11 +24,11 @@ public class Category {
     }
 
     public String getCategory() {
-        return Category;
+        return category;
     }
 
-    public void setCategory(String Category) {
-        this.Category = Category;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
 

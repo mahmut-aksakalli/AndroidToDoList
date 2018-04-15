@@ -35,4 +35,12 @@ dependencies {
 
     // RecyclerView
     implementation "com.android.support:recyclerview-v7:${rootProject.ext.androidSupportVersion}"
+
+    // LiveData:
+    implementation "android.arch.lifecycle:extensions:${rootProject.ext.archVersion}"
+    annotationProcessor "android.arch.lifecycle:compiler:${rootProject.ext.archVersion}"
+
+    //Room database
+    implementation "android.arch.persistence.room:runtime:${rootProject.ext.roomVersion}"
+    annotationProcessor "android.arch.persistence.room:compiler:${rootProject.ext.roomVersion}"
 }

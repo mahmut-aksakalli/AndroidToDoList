@@ -1,11 +1,16 @@
 package hr.ferit.mahmutaksakalli.todolist.model;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
+@Entity
 public class Todo {
 
-    private int Id;
-    private String Todo;
-    private String Category;
-    private String Priority;
+    @PrimaryKey  private int Id;
+    @ColumnInfo  private String Todo;
+    @ColumnInfo  private String Category;
+    @ColumnInfo  private String Priority;
 
     public Todo(int Id, String Todo, String Category, String Priority) {
         this.Id = Id;
